@@ -1,0 +1,56 @@
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type=text/javascript>
+        $(function() {
+          $('a#test1').bind('click', function() {
+            $.getJSON('/background_process_test1',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+
+        $(function() {
+          $('a#test2').bind('click', function() {
+            $.getJSON('/background_process_test2',
+                function(data) {
+              //do nothing
+            });
+            return false;
+          });
+        });
+
+
+</script>
+
+
+
+<div class='container'>
+ <meta charset="utf-8">
+       
+        <form>
+            <a href=# id=test1><button class='btn btn-default'>Очистить базу REDIS</button></a>
+        </form>
+       
+      <!--  <form> 
+            <a  href=# id=test2><button class='btn btn-default'  >minus</button></a>
+        </form> -->
+
+		<h3>Расширитель ссылок V1.0</h3>
+		<h4>Короткая ссылка</h4>
+
+<form  action="" method="post">
+    <input id = "shorturl" type="text" size="30" name="shorturl" value="{{ shorturl }}"><br>
+	<h4>Исходная ссылка</h4>
+    <input id = "longurl" type="text" size="60" name="longurl" value="{{ longurl }}"><br>
+	<h4>Время жизни ссылки, осталось сек.</h4>
+	<input id = "ttltime" type="text" size="30" name="ttltime" value="{{ ttltime }}"><br><br>
+    <input type="submit" value = "Восстановить!"><br>
+	
+	
+	
+	
+</form>
+
+
+</div>
